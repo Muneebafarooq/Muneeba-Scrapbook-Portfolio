@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10070e">
+  <title>Muneeba Farooq | UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Actual pink smoke image -->
+  <div class="smoke-background" aria-hidden="true"></div>
+
+  <!-- Actual butterfly images, animated by JavaScript -->
+  <div class="butterfly-field" id="butterfly-field" aria-hidden="true"></div>
+
+  <!-- Welcome intro -->
+  <div class="welcome-screen" id="welcome-screen">
+    <img src="images/pink-smoke.png" class="welcome-smoke-image" alt="" aria-hidden="true">
+    <img src="images/butterfly-1.png" class="welcome-butterfly-image" alt="" aria-hidden="true">
+
+    <div class="welcome-banner">
+      <span>MUNEEBA FAROOQ</span>
+    </div>
+
+    <div class="welcome-content">
+      <p class="eyebrow">A LITTLE WORLD OF CREATIVITY</p>
+      <h1>Where imagination<br>meets <em>design.</em></h1>
+      <p>Designing ideas into experiences.</p>
+      <button class="explore-button" id="explore-button">
+        Explore My World <span>↗</span>
+      </button>
+    </div>
+
+    <button class="skip-intro" id="skip-intro">Skip intro ↗</button>
+  </div>
+
+  <header class="site-header">
+    <a href="#home" class="logo">Muneeba<span>.</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#designs">Designs</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact" class="nav-contact">Let's Talk ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> COMPUTER SCIENCE STUDENT & UI/UX DESIGNER</p>
+        <h1>Turning ideas into<br>beautiful <em>experiences.</em></h1>
+        <p class="hero-description">
+          Hello, I'm Muneeba — a creative thinker who loves meaningful interfaces,
+          thoughtful details and designs that feel as good as they look.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#designs">Explore My Work ↗</a>
+          <a class="button button-glass" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hero-note"><span class="note-line"></span> Curiosity in mind. Creativity at heart.</div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="photo-glow"></div>
+        <div class="photo-frame">
+          <img src="images/pic.png" alt="Muneeba Farooq" class="hero-photo">
+          ```html
+<div class="profile-butterflies">
+  <img src="images/butterfly-1.png" alt="">
+  <img src="images/butterfly-1.png" alt="">
+  <img src="images/butterfly-1.png" alt="">
+  <img src="images/butterfly-1.png" alt="">
+</div>
+
+        </div>
+        <div class="photo-caption glass-card">
+          <span class="caption-star">✦</span>
+          <div><strong>Designing with intention</strong><small>Every detail tells a story.</small></div>
+        </div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="quote-section reveal">
+      <span class="quote-mark">“</span>
+      <p>Good design is not just what you see.<br>It's how it makes you <em>feel.</em></p>
+      <span class="quote-bottom">A LITTLE THOUGHT FROM MY CREATIVE WORLD</span>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <h2>A little about <em>my world.</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-main glass-card reveal">
+          <span class="card-flower">✳</span>
+          <h3>Curious mind.<br><em>Creative soul.</em></h3>
+          <p>I'm a 5th-semester Computer Science student at Lahore Garrison University with a growing passion for UI/UX design and digital experiences. I enjoy transforming ideas into intuitive, visually appealing interfaces using creativity, research and attention to detail.</p>
+          <p>I'm always learning, experimenting with new ideas and looking for opportunities to grow as a designer.</p>
+        </div>
+        <div class="about-side reveal">
+          <div class="mini-card glass-card"><span class="mini-icon">✧</span><h3>My approach</h3><p>Clean layouts, meaningful details and user-friendly experiences.</p></div>
+          <div class="mini-card glass-card"><span class="mini-icon">♡</span><h3>What I love</h3><p>Exploring colors, typography, layouts and fresh creative ideas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHAT I BRING</p>
+        <h2>Skills & <em>creative tools.</em></h2>
+        <p class="section-subtitle">A mix of technical foundations and creative thinking.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card glass-card reveal"><span>01</span><div class="skill-symbol">✳</div><h3>UI/UX Design</h3><p>User-focused layouts, visual hierarchy and intuitive experiences.</p></article>
+        <article class="skill-card glass-card reveal"><span>02</span><div class="skill-symbol">◈</div><h3>Figma & Prototyping</h3><p>Interface design, wireframes, prototypes and design exploration.</p></article>
+        <article class="skill-card glass-card reveal"><span>03</span><div class="skill-symbol">⌘</div><h3>Web Development</h3><p>HTML and CSS fundamentals for responsive web interfaces.</p></article>
+        <article class="skill-card glass-card reveal"><span>04</span><div class="skill-symbol">✧</div><h3>Problem Solving</h3><p>Breaking down problems and exploring practical solutions.</p></article>
+        <article class="skill-card glass-card reveal"><span>05</span><div class="skill-symbol">◎</div><h3>Creative Thinking</h3><p>Colors, composition, visual exploration and attention to detail.</p></article>
+        <article class="skill-card glass-card reveal"><span>06</span><div class="skill-symbol">↗</div><h3>Communication</h3><p>Sharing ideas, collaborating and learning with others.</p></article>
+      </div>
+      <div class="tool-strip reveal">
+        <span>TOOLS & TECHNOLOGIES</span>
+        <div class="tool-list"><b>Figma</b><b>HTML</b><b>CSS</b><b>Python</b><b>Databases</b><b>Prototyping</b></div>
+      </div>
+    </section>
+
+    <section class="section" id="designs">
+      <div class="section-heading reveal">
+        <p class="eyebrow">MY CREATIVE PLAYGROUND</p>
+        <h2>Little pieces of <em>imagination.</em></h2>
+        <p class="section-subtitle">A collection of interfaces and visual ideas I've explored.</p>
+      </div>
+      <div class="design-grid">
+        <article class="design-card reveal"><div class="design-image"><img src="images/clothing.png" alt="Clothing website design" loading="lazy"></div><div class="design-info"><span>01 / WEB DESIGN</span><h3>Fashion & Clothing</h3><p>Style meets a thoughtful digital experience.</p></div></article>
+        <article class="design-card reveal"><div class="design-image"><img src="images/coffee.png" alt="Coffee website design" loading="lazy"></div><div class="design-info"><span>02 / WEB DESIGN</span><h3>Coffee Corner</h3><p>A warm visual direction for a coffee brand.</p></div></article>
+        <article class="design-card reveal"><div class="design-image"><img src="images/travel.png" alt="Travel website design" loading="lazy"></div><div class="design-info"><span>03 / UI DESIGN</span><h3>Travel Exploration</h3><p>A concept inspired by places and adventures.</p></div></article>
+        <article class="design-card reveal"><div class="design-image"><img src="images/fitness.png" alt="Fitness interface design" loading="lazy"></div><div class="design-info"><span>04 / UI DESIGN</span><h3>Fitness Experience</h3><p>Motivation through a clear interface.</p></div></article>
+        <article class="design-card reveal"><div class="design-image"><img src="images/food-menu.png" alt="Food menu design" loading="lazy"></div><div class="design-info"><span>05 / VISUAL DESIGN</span><h3>Food Menu</h3><p>Colorful food-inspired visual exploration.</p></div></article>
+        <article class="design-card reveal"><div class="design-image"><img src="images/medical-poster.png" alt="Medical poster design" loading="lazy"></div><div class="design-info"><span>06 / POSTER DESIGN</span><h3>Medical Poster</h3><p>Visual communication with a clear message.</p></div></article>
+        <article class="design-card reveal"><div class="design-image"><img src="images/chatbot.png" alt="TripMate chatbot interface" loading="lazy"></div><div class="design-info"><span>07 / FIGMA PROTOTYPE</span><h3>TripMate AI</h3><p>A chatbot concept for smarter travel planning.</p></div></article>
+        <article class="design-card reveal"><div class="design-image video-cover"><video controls preload="metadata" poster="images/food-menu.png"><source src="images/pizza-prototype.mp4" type="video/mp4">Your browser does not support video.</video></div><div class="design-info"><span>08 / PROTOTYPE</span><h3>Interactive Prototype</h3><p>A look at interaction and motion in a design concept.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading reveal"><p class="eyebrow">FROM IDEAS TO PROJECTS</p><h2>Things I've <em>worked on.</em></h2></div>
+      <div class="projects-grid">
+        <article class="project-card glass-card reveal"><div class="project-image"><img src="images/student-portal.png" alt="Student portal project" loading="lazy"></div><div class="project-body"><span class="project-tag">HCI / WEB INTERFACE</span><h3>Student Portal Website</h3><p>A student-focused interface concept designed to make academic information easier to access.</p><div class="tag-row"><span>UI Design</span><span>HTML</span><span>CSS</span></div></div></article>
+        <article class="project-card glass-card reveal"><div class="project-image"><img src="images/internship.png" alt="Online internship portal" loading="lazy"></div><div class="project-body"><span class="project-tag">DATABASE PROJECT</span><h3>Online Internship Portal</h3><p>A portal concept for internship listings, student applications and application status tracking.</p><div class="tag-row"><span>Database</span><span>Application Tracking</span></div></div></article>
+        <article class="project-card glass-card reveal"><div class="project-image"><img src="images/fleet-command.png" alt="Fleet Command System" loading="lazy"></div><div class="project-body"><span class="project-tag">HACKATHON PROJECT</span><h3>Fleet Command System</h3><p>A project concept exploring organized fleet operations and a clear system workflow.</p><div class="tag-row"><span>Teamwork</span><span>Problem Solving</span></div></div></article>
+
+      </div>
+    </section>
+
+    <section class="section" id="certificates">
+      <div class="section-heading reveal"><p class="eyebrow">LEARNING NEVER STOPS</p><h2>My learning <em>milestones.</em></h2></div>
+      <div class="certificate-grid">
+        <article class="certificate-card glass-card reveal"><img src="images/internship-certificate.png" alt="Internship certificate" loading="lazy"><div><span>01 / EXPERIENCE</span><h3>Internship Certificate</h3><p>A milestone in my professional learning journey.</p></div></article>
+        <article class="certificate-card glass-card reveal"><img src="images/ai-course.png" alt="AI course certificate" loading="lazy"><div><span>02 / COURSE</span><h3>Artificial Intelligence</h3><p>Exploring AI concepts and emerging technologies.</p></div></article>
+        <article class="certificate-card glass-card reveal"><img src="images/computer-course.png" alt="Computer course certificate" loading="lazy"><div><span>03 / COURSE</span><h3>Computer Course</h3><p>Building my foundation in computing and technology.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-heading reveal"><p class="eyebrow">MY JOURNEY SO FAR</p><h2>Learning, growing, <em>creating.</em></h2></div>
+      <div class="education-card glass-card reveal">
+        <div class="education-icon">✧</div>
+        <div><span class="project-tag">CURRENTLY STUDYING</span><h3>BS Computer Science</h3><p>Lahore Garrison University</p><p class="muted">5th Semester · Lahore, Pakistan</p></div>
+        <span class="education-year">2024 — PRESENT</span>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="contact-glow"></div>
+      <div class="contact-content reveal">
+        <p class="eyebrow">HAVE AN IDEA IN MIND?</p>
+        <h2>Let's create something<br><em>beautiful together.</em></h2>
+        <p>I'm open to UI/UX internships, creative opportunities and collaborations where I can learn and grow.</p>
+        <a class="button button-primary" href="mailto:muneebafarooq39@gmail.com">Say Hello ↗</a>
+        <div class="contact-details">
+          <a href="mailto:muneebafarooq39@gmail.com">muneebafarooq39@gmail.com</a>
+          <a href="https://www.linkedin.com/in/muneeba-farooq-b085493a7/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+          <span>Lahore, Pakistan</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#home" class="logo">Muneeba<span>.</span></a>
+    <p>Designed with love, curiosity & a little bit of magic.</p>
+    <span>© <span id="current-year"></span> Muneeba Farooq</span>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
