@@ -1,5 +1,79 @@
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ==========================================
+  // MAGICAL FANTASY BACKGROUND MUSIC
+  // ==========================================
+
+  const backgroundMusic = document.getElementById("background-music");
+  const musicToggle = document.getElementById("music-toggle");
+  const musicLabel = musicToggle?.querySelector(".music-label");
+
+  if (backgroundMusic && musicToggle && musicLabel) {
+    backgroundMusic.volume = 0.12;
+
+    function updateMusicButton(isPlaying) {
+      musicToggle.classList.toggle("is-playing", isPlaying);
+
+      musicToggle.setAttribute(
+        "aria-pressed",
+        String(isPlaying)
+      );
+
+      musicToggle.setAttribute(
+        "aria-label",
+        isPlaying
+          ? "Pause background music"
+          : "Play background music"
+      );
+
+      musicLabel.textContent = isPlaying
+        ? "Pause Magic Music"
+        : "Play Magic Music";
+    }
+
+    musicToggle.addEventListener("click", async () => {
+      if (backgroundMusic.paused) {
+        try {
+          await backgroundMusic.play();
+          updateMusicButton(true);
+        } catch (error) {
+          updateMusicButton(false);
+          console.error("Music playback failed:", error);
+
+          alert(
+            "Music play nahi hui. Check karo ke images/fairy-music.mp3 file sahi jagah par hai."
+          );
+        }
+      } else {
+        backgroundMusic.pause();
+        updateMusicButton(false);
+      }
+    });
+
+    backgroundMusic.addEventListener("play", () => {
+      updateMusicButton(true);
+    });
+
+    backgroundMusic.addEventListener("pause", () => {
+      updateMusicButton(false);
+    });
+
+    backgroundMusic.addEventListener("ended", () => {
+      updateMusicButton(false);
+    });
+
+    backgroundMusic.addEventListener("error", () => {
+      updateMusicButton(false);
+      console.error(
+        "Music file load nahi hui. Check images/fairy-music.mp3"
+      );
+    });
+
+    updateMusicButton(false);
+  }
+
+
   // ==========================================
   // WELCOME SCREEN — FIXED TO MATCH YOUR HTML
   // ==========================================
@@ -32,9 +106,23 @@ document.addEventListener("DOMContentLoaded", () => {
   if (skipIntroButton) {
     skipIntroButton.addEventListener("click", (event) => {
       event.preventDefault();
+
       closeWelcome();
+
+      // Always start from the Home section
+      window.scrollTo({
+        top: 0,
+        behavior: "instant"
+      });
+
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
     });
   }
+
 
   // ==========================================
   // MOBILE NAVIGATION
@@ -45,9 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+      const isOpen = navLinks.classList.toggle("mobile-open");
 
-      const isOpen = navLinks.classList.contains("active");
+      menuToggle.classList.toggle("active", isOpen);
       menuToggle.setAttribute("aria-expanded", String(isOpen));
       menuToggle.setAttribute(
         "aria-label",
@@ -57,13 +145,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+        navLinks.classList.remove("mobile-open");
         menuToggle.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.setAttribute("aria-label", "Open navigation");
       });
     });
   }
+
 
   // ==========================================
   // SCROLL REVEAL ANIMATIONS
@@ -93,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
   // ==========================================
   // BACK TO TOP
   // ==========================================
@@ -120,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
   // ==========================================
   // FOOTER YEAR
   // ==========================================
@@ -129,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
   }
+
 
   // ==========================================
   // ACTUAL BUTTERFLY IMAGES
@@ -165,6 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
       butterflyField.appendChild(butterfly);
     });
   }
+
 
   // ==========================================
   // IMAGE / VIDEO LIGHTBOX PREVIEW
@@ -412,4 +505,5 @@ document.addEventListener("DOMContentLoaded", () => {
       closeLightbox();
     }
   });
+
 });
